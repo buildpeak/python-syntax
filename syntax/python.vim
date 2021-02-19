@@ -72,8 +72,8 @@ endif
 " Keywords
 "
 
-syn keyword pythonStatementFlow break continue del return pass yield global assert lambda with
-syn keyword pythonStatementFlow raise nextgroup=pythonExClass skipwhite
+syn keyword pythonStatement2 break continue del return pass yield global assert lambda with
+syn keyword pythonStatement2 raise nextgroup=pythonExClass skipwhite
 syn keyword pythonStatement     def nextgroup=pythonFunction skipwhite
 syn keyword pythonStatement     class nextgroup=pythonClass skipwhite
 if s:Enabled('g:python_highlight_class_vars')
@@ -98,7 +98,7 @@ if s:Python2Syntax()
     syn keyword pythonImport      as
     syn match   pythonFunction    '[a-zA-Z_][a-zA-Z0-9_]*' display contained
 else
-    syn keyword pythonStatement   as nonlocal
+    syn keyword pythonStatement2  as nonlocal
     syn match   pythonStatement   '\v\.@<!<await>'
     syn match   pythonFunction    '\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*' display contained
     syn match   pythonClass       '\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*' display contained
