@@ -112,7 +112,8 @@ endif
 "
 " Operators
 "
-syn keyword pythonOperator      and in is not or
+"syn keyword pythonOperator      and in is not or
+syn keyword pythonStatement2     and in is not or
 if s:Enabled('g:python_highlight_operators')
     syn match pythonOperator        '\V=\|-\|+\|*\|@\|/\|%\|&\||\|^\|~\|<\|>\|!=\|:='
 endif
